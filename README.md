@@ -1,6 +1,6 @@
 # Agency-Project
 
-  A landing page of a fictional company
+  A responsive landing page of a fictional company
   
 # Need to review:
 
