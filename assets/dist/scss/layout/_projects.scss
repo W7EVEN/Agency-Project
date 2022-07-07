@@ -1,0 +1,102 @@
+@import "../base/base";
+@import "../themes/themes";
+.jobs-container {
+  background-color: $secondary-color;
+  padding: 3rem;
+
+  @include mobile {
+    padding: 2rem;
+  }
+
+  h2 {
+    @extend %section-title;
+  }
+
+  .jobs-list {
+    display: flex;
+    padding: 2rem 0;
+
+    @include mobile {
+      flex-direction: column;
+    }
+
+    .first-job {
+      width: 30%;
+      height: 415px;
+      margin: 0 2%;
+
+      background-image: url("../../src/images/job1.jpg");
+      position: relative;
+      cursor: pointer;
+      transition: 0.5s;
+      @extend %center-bg;
+      @extend %card-hover;
+
+      @include mobile {
+        @include card-mobile;
+      }
+    }
+    .other-jobs-container {
+      display: flex;
+      flex-wrap: wrap;
+      width: 68%;
+
+      @include mobile {
+        width: 100%;
+        flex-direction: column;
+      }
+
+      .job-card {
+        width: 46%;
+        height: 200px;
+        position: relative;
+        cursor: pointer;
+        margin-bottom: 15px;
+        margin-right: 15px;
+        @extend %center-bg;
+        @extend %card-hover;
+
+        @include mobile {
+          @include card-mobile;
+        }
+      }
+
+      #job2 {
+        background-image: url("../../src/images/job2.jpg");
+      }
+      #job3 {
+        background-image: url("../../src/images/job3.jpg");
+      }
+      #job4 {
+        background-image: url("../../src/images/job4.jpg");
+      }
+      #job5 {
+        background-image: url("../../src/images/job5.jpg");
+      }
+    }
+
+    .job-card-cover {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      padding-top: 1.75rem;
+      background-color: rgba($color: #000000, $alpha: 0.6);
+      border: 3px solid $primary-color;
+    }
+    .job-card-title {
+      text-align: center;
+      color: #fff;
+      font-size: 2.2rem;
+      transition: 0.5s;
+      font-weight: bold;
+    }
+    .job-card-description {
+      text-align: center;
+      color: #fff;
+      padding: 1rem;
+      font-size: 0.9rem;
+    }
+  }
+}
